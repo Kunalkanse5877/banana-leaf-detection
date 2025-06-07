@@ -1,0 +1,143 @@
+{
+    "diseases": [{
+            "name": "Banana Black Sigatoka Disease",
+            "description": "Black Sigatoka, also known as black leaf streak, is a fungal disease caused by *Mycosphaerella fijiensis*. It leads to significant reductions in leaf area, resulting in yield losses of 50% or more and premature ripening, a serious defect in exported fruit.",
+            "symptoms": [
+                "Dark streaks on the upper side of leaves.",
+                "Yellowing of leaf margins.",
+                "Premature leaf death."
+            ],
+            "prescribed_medicines": [{
+                    "name": "Fungicide A",
+                    "description": "A systemic fungicide effective against *M. fijiensis*, applied as a foliar spray.",
+                    "image_url": "https://example.com/images/fungicideA.jpg"
+                },
+                {
+                    "name": "Fungicide B",
+                    "description": "A contact fungicide used in rotation with systemic fungicides to prevent resistance.",
+                    "image_url": "https://example.com/images/fungicideB.jpg"
+                }
+            ]
+        },
+        {
+            "name": "Banana Bract Mosaic Virus Disease",
+            "description": "Banana bract mosaic virus (BBrMV) is an exotic plant pest that causes significant economic losses. The main symptom is the dark, red-brown mosaic pattern found on the banana flower bract.",
+            "symptoms": [
+                "Mosaic patterns on flower bracts.",
+                "Reduced fruit yield.",
+                "Deformed fruits."
+            ],
+            "prescribed_medicines": [{
+                    "name": "Insecticide C",
+                    "description": "Controls aphid populations, which are vectors for BBrMV transmission.",
+                    "image_url": "https://example.com/images/insecticideC.jpg"
+                },
+                {
+                    "name": "Insecticide D",
+                    "description": "A broad-spectrum insecticide effective against various pests.",
+                    "image_url": "https://example.com/images/insecticideD.jpg"
+                }
+            ]
+        },
+        {
+            "name": "Banana Healthy Leaf",
+            "description": "A condition where banana leaves remain healthy and free from diseases, ensuring optimal photosynthesis and fruit production.",
+            "symptoms": [
+                "Vibrant green leaves.",
+                "No signs of disease or pests.",
+                "Optimal fruit development."
+            ],
+            "prescribed_medicines": [{
+                    "name": "Fungicide E",
+                    "description": "A preventive fungicide to maintain leaf health.",
+                    "image_url": "https://example.com/images/fungicideE.jpg"
+                },
+                {
+                    "name": "Fungicide F",
+                    "description": "A broad-spectrum fungicide for general leaf protection.",
+                    "image_url": "https://example.com/images/fungicideF.jpg"
+                }
+            ]
+        },
+        {
+            "name": "Banana Insect Pest Disease",
+            "description": "Various insect pests affect banana plants, causing damage to leaves, fruits, and stems.",
+            "symptoms": [
+                "Visible insects on plant surfaces.",
+                "Damaged or deformed fruits.",
+                "Stunted plant growth."
+            ],
+            "prescribed_medicines": [{
+                    "name": "Insecticide E",
+                    "description": "A systemic insecticide targeting root-feeding pests.",
+                    "image_url": "https://example.com/images/insecticideE.jpg"
+                },
+                {
+                    "name": "Insecticide F",
+                    "description": "A contact insecticide effective against leaf-feeding insects.",
+                    "image_url": "https://example.com/images/insecticideF.jpg"
+                }
+            ]
+        },
+        {
+            "name": "Banana Moko Disease",
+            "description": "Moko disease is caused by the bacterium *Ralstonia solanacearum*. It leads to wilting and death of banana plants.",
+            "symptoms": [
+                "Wilting of leaves.",
+                "Yellowing of leaf margins.",
+                "Black discoloration of vascular tissues."
+            ],
+            "prescribed_medicines": [{
+                    "name": "Antibiotic G",
+                    "description": "An antibiotic used to control bacterial infections in plants.",
+                    "image_url": "https://example.com/images/antibioticG.jpg"
+                },
+                {
+                    "name": "Antibiotic H",
+                    "description": "A broad-spectrum antibiotic effective against various plant pathogens.",
+                    "image_url": "https://example.com/images/antibioticH.jpg"
+                }
+            ]
+        },
+        {
+            "name": "Banana Panama Disease",
+            "description": "Panama disease is caused by the soil-borne fungus *Fusarium oxysporum* f.sp. *cubense*. It causes wilting and death of banana plants.",
+            "symptoms": [
+                "Wilting of leaves.",
+                "Yellowing of leaf margins.",
+                "Black discoloration of vascular tissues."
+            ],
+            "prescribed_medicines": [{
+                    "name": "Fungicide G",
+                    "description": "A soil-applied fungicide effective against *F. oxysporum*.",
+                    "image_url": "https://example.com/images/fungicideG.jpg"
+                },
+                {
+                    "name": "Fungicide H",
+                    "description": "A systemic fungicide used to control soil-borne pathogens.",
+                    "image_url": "https://example.com/images/fungicideH.jpg"
+                }
+            ]
+        },
+        {
+            "name": "Banana Yellow Sigatoka Disease",
+            "description": "Yellow Sigatoka is caused by the fungus *Mycosphaerella musicola*. It leads to premature leaf death and reduced yield.",
+            "symptoms": [
+                "Yellow streaks on leaves.",
+                "Premature leaf death.",
+                "Reduced fruit size."
+            ],
+            "prescribed_medicines": [{
+                    "name": "Fungicide I",
+                    "description": "A systemic fungicide effective against *M. musicola*.",
+                    "image_url": "https://example.com/images/fungicideI.jpg"
+                },
+                {
+                    "name": "Fungicide J",
+                    "description": "A contact fungicide used in rotation with systemic fungicides.",
+                    "image_url": "https://example.com/images/fungicideJ.jpg"
+                }
+            ]
+        }
+    ]
+}

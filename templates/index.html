@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Disease Detection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        /* Styling for navigation links */
+        
+        .nav-link {
+            color: white;
+            transition: color 0.2s ease;
+        }
+        /* Highlight the active page link */
+        
+        .nav-link.active,
+        .nav-link:hover {
+            color: #F59E0B;
+            /* Yellow for active and hover */
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-r from-green-400 to-green-600 text-white">
+
+    <!-- Header with Navigation -->
+    <header class="bg-green-800 text-white p-6 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-extrabold tracking-wide">Crop Disease Detection</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a id="home-link" class="nav-link" href="/">Home</a></li>
+                    <li><a id="disease-detection-link" class="nav-link" href="/disease-detection">Disease Detection</a></li>
+                    <li><a id="disease-info-link" class="nav-link" href="/prediction-result">Diseases Report</a></li>
+                    <li><a id="remedy-link" class="nav-link" href="/remedy-prevention">Diseases & Remedies</a></li>
+                    <li><a id="about-link" class="nav-link" href="/about">About</a></li>
+                    <li><a id="contact-link" class="nav-link" href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section with Crop Disease Image Background -->
+    <section class="relative bg-cover bg-center bg-no-repeat flex items-center justify-center" style="background-image: url('https://static.vecteezy.com/system/resources/previews/030/665/840/non_2x/corn-high-quality-4k-ultra-hd-hdr-free-photo.jpg'); height: 100vh; width: 100vw;">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="container mx-auto text-center relative z-10 py-20 flex flex-col items-center justify-center">
+            <h2 class="text-5xl font-bold text-white leading-tight mb-6">Detect Crop Diseases Early</h2>
+            <p class="text-xl text-white mb-8 max-w-3xl">Protect your crops and safeguard your livelihood with our AI-powered crop disease detection platform. By identifying diseases in their earliest stages, you can prevent outbreaks, reduce the need for chemical treatments, and save on overall
+                costs. Our advanced technology uses image recognition to detect symptoms on various crop types with high accuracy, helping you make timely and effective decisions.</p>
+            <a href="disease-detection" class="bg-yellow-500 text-green-800 py-3 px-8 rounded-full text-lg font-bold shadow-md hover:bg-yellow-400 transition duration-300">
+                Start Detection
+            </a>
+        </div>
+    </section>
+
+    <!-- Why Early Detection Section -->
+    <section class="bg-green-100 py-12">
+        <section class="container mx-auto py-12 text-center">
+            <h2 class="text-4xl font-bold text-green-800 mb-6">Why Early Crop Disease Detection Matters</h2>
+            <p class="text-lg text-gray-700 mb-4">
+                Crop diseases can devastate your harvest, leading to financial losses and reduced food supply. Early detection is crucial to prevent the spread of diseases and minimize the damage. Our platform uses AI-powered tools to help farmers detect crop diseases
+                quickly and accurately, ensuring healthier crops and more successful harvests.
+            </p>
+            <p class="text-lg text-gray-700">
+                By using our service, you can protect your crops from various diseases, increase productivity, and contribute to sustainable agriculture practices.
+            </p>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="bg-green-100 py-12">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl font-bold text-green-800 mb-6">How It Works</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <img src="https://t4.ftcdn.net/jpg/02/17/88/73/360_F_217887350_mDfLv2ootQNeffWXT57VQr8OX7IvZKvB.jpg" alt="Upload Image" class="w-16 mx-auto mb-4">
+                        <h3 class="text-xl font-semibold text-green-700">Step 1: Upload Your Crop Image</h3>
+                        <p class="text-gray-600 mt-2">Upload a clear image of your crop leaves or fruits showing any potential disease symptoms.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <img src="https://media.istockphoto.com/id/1367545305/vector/artificial-intelligence-silhouette-vector-icons-isolated-on-white-cyber-technologies-icon.jpg?s=612x612&w=0&k=20&c=nkdmZgLC56BH6VNIshsukJfJhnqm6VbnB_Rb3TlvilI=" alt="AI Detection" class="w-16 mx-auto mb-4">
+                        <h3 class="text-xl font-semibold text-green-700">Step 2: AI Analysis</h3>
+                        <p class="text-gray-600 mt-2">Our AI algorithm analyzes the image for any signs of disease and cross-references it with a database of common crop diseases.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <img src="https://static.vecteezy.com/system/resources/previews/012/694/725/non_2x/test-results-icon-vector.jpg" alt="Results" class="w-16 mx-auto mb-4">
+                        <h3 class="text-xl font-semibold text-green-700">Step 3: Get Results</h3>
+                        <p class="text-gray-600 mt-2">You will receive detailed results, including disease identification and recommendations for treatment or prevention.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="container mx-auto py-12 text-center">
+            <h2 class="text-4xl font-bold text-green-800 mb-6">What Our Users Are Saying</h2>
+            <div class="flex justify-center space-x-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg max-w-xs">
+                    <img src="static\images\Farmer1.jpg" alt="Ravi Kumar" class="mx-auto mb-4 rounded-full w-24 h-24 object-cover">
+                    <p class="text-lg text-gray-700 mb-4">"This tool helped me identify a disease in my tomato crop that I wouldn't have noticed until it was too late. I'm very grateful!"</p>
+                    <p class="text-lg font-semibold text-green-700">Ravi Kumar, Farmer</p>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg max-w-xs">
+                    <img src="static\images\AgricultureExpert.jpg" alt="Yatendra Singh" class="mx-auto mb-4 rounded-full w-24 h-24 object-cover">
+                    <p class="text-lg text-gray-700 mb-4">"I was able to save my rice crop from a fungal disease thanks to the early detection provided by this website. Highly recommend it!"</p>
+                    <p class="text-lg font-semibold text-green-700">Yatendra Singh, Agricultural Expert</p>
+                </div>
+            </div>
+        </section>
+
+
+ <!-- Footer Section -->
+ <footer class="bg-green-800 text-white py-6 text-center">
+    <p>&copy; 2024 Crop Disease Detection Project</p>
+    <p>Contact us: <a href="#" class="text-yellow-300">Kunalkanse@cropdisease.com</a></p>
+    </div>
+</footer>
+
+</body>
+
+<script>
+    // Get current URL
+    const currentUrl = window.location.href;
+
+    // Get all navigation links
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    // Loop through all links and check if the href matches the current URL
+    navLinks.forEach(link => {
+        if (currentUrl.includes(link.href)) {
+            link.classList.add('active');
+        }
+    });
+</script>
+
+</html>

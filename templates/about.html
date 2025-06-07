@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        /* Styling for navigation links */
+        
+        .nav-link {
+            color: white;
+            transition: color 0.2s ease;
+        }
+        /* Highlight the active page link */
+        
+        .nav-link.active,
+        .nav-link:hover {
+            color: #F59E0B;
+            /* Yellow for active and hover */
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-r from-green-400 to-green-600 text-white">
+    <!-- Header with Navigation -->
+    <header class="bg-green-800 text-white p-6 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-extrabold tracking-wide">About</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a id="home-link" class="nav-link" href="/">Home</a></li>
+                    <li><a id="disease-detection-link" class="nav-link" href="/disease-detection">Disease Detection</a></li>
+                    <li><a id="disease-info-link" class="nav-link" href="/prediction-result">Diseases Report</a></li>
+                    <li><a id="remedy-link" class="nav-link" href="/remedy-prevention">Diseases & Remedies</a></li>
+                    <li><a id="about-link" class="nav-link active" href="/about">About</a></li>
+                    <li><a id="contact-link" class="nav-link" href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="p-10 bg-white rounded-lg shadow-xl mx-auto my-10 max-w-4xl">
+        <!-- Image in a Circle -->
+        <div class="w-32 h-32 rounded-full overflow-hidden mx-auto mb-6">
+            <img src="/static/images/Logo.jpg" alt="Crop Disease Detection" class="w-full h-full object-cover">
+        </div>
+
+        <h2 class="text-3xl font-semibold mb-6 text-center text-gray-700">About the Crop Disease Detection Project</h2>
+        <p class="text-lg text-gray-700 text-center mb-6">
+            This project uses advanced machine learning algorithms to detect diseases in crops, providing farmers with essential insights on how to manage and treat their crops.
+        </p>
+        <p class="text-gray-700 text-center mb-6">
+            Our mission is to help farmers identify diseases early and take preventive measures before their crops are severely affected, reducing losses and improving agricultural productivity.
+        </p>
+    </section>
+
+
+ <!-- Footer Section -->
+ <footer class="bg-green-800 text-white py-6 text-center">
+    <p>&copy; 2024 Crop Disease Detection Project</p>
+    <p>Contact us: <a href="#" class="text-yellow-300">Kunalkanse@cropdisease.com</a></p>
+    </div>
+</footer>
+
+    <script>
+        // Get current URL
+        const currentUrl = window.location.href;
+
+        // Get all navigation links
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        // Loop through all links and check if the href matches the current URL
+        navLinks.forEach(link => {
+            if (currentUrl.includes(link.href)) {
+                link.classList.add('active');
+            }
+        });
+    </script>
+</body>
+
+</html>

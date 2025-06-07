@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        /* Styling for navigation links */
+        
+        .nav-link {
+            color: white;
+            transition: color 0.2s ease;
+        }
+        /* Highlight the active page link */
+        
+        .nav-link.active,
+        .nav-link:hover {
+            color: #F59E0B;
+            /* Yellow for active and hover */
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-r from-green-400 to-green-600 text-white">
+    <!-- Header with Navigation -->
+    <header class="bg-green-800 text-white p-6 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-extrabold tracking-wide">Contact Us</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a id="home-link" class="nav-link" href="/">Home</a></li>
+                    <li><a id="disease-detection-link" class="nav-link" href="/disease-detection">Disease Detection</a></li>
+                    <li><a id="disease-info-link" class="nav-link" href="/prediction-result">Diseases Report</a></li>
+                    <li><a id="remedy-link" class="nav-link" href="/remedy-prevention">Diseases & Remedies</a></li>
+                    <li><a id="about-link" class="nav-link" href="/about">About</a></li>
+                    <li><a id="contact-link" class="nav-link active" href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <!-- Updated Form (No white background for container) -->
+    <section class="p-10 bg-white rounded-lg shadow-xl mx-auto my-10 max-w-4xl">
+        <div class="mx-auto">
+            <!-- Removed max-w-md and made it consistent with max-w-4xl for matching sizes -->
+            <div class="mx-auto px-8 py-6">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Contact Us</h2>
+                <form action="/send-message" method="POST">
+                    <div class="mb-4">
+                        <label class="block text-gray-800 mb-1" for="name">Your Name</label>
+                        <input class="w-full px-4 py-2 bg-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-300 transition duration-300" placeholder="Enter your name" type="text" id="name" name="name" required />
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-800 mb-1" for="email">Your Email</label>
+                        <input class="w-full px-4 py-2 bg-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-300 transition duration-300" placeholder="Enter your email" type="email" id="email" name="email" required />
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-800 mb-1" for="message">Your Message</label>
+                        <textarea class="w-full px-4 py-2 bg-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-300 transition duration-300" rows="4" placeholder="Enter your message" id="message" name="message" required></textarea>
+                    </div>
+                    <button class="w-full bg-yellow-300 text-gray-800 py-2 px-4 rounded-lg hover:bg-yellow-400 transition duration-300" type="submit">
+                        Send Message
+                    </button>
+                </form>
+                
+            </div>
+        </div>
+    </section>
+
+
+ <!-- Footer Section -->
+ <footer class="bg-green-800 text-white py-6 text-center">
+    <p>&copy; 2024 Crop Disease Detection Project</p>
+    <p>Contact us: <a href="#" class="text-yellow-300">Kunalkanse@cropdisease.com</a></p>
+    </div>
+</footer>
+
+    <script>
+        // Get current URL
+        const currentUrl = window.location.href;
+
+        // Get all navigation links
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        // Loop through all links and check if the href matches the current URL
+        navLinks.forEach(link => {
+            if (currentUrl.includes(link.href)) {
+                link.classList.add('active');
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Prediction Result</title>
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    />
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+        }
+        /* Styling for navigation links */
+        .nav-link {
+            color: white;
+            transition: color 0.2s ease;
+        }
+        /* Highlight the active page link */
+        .nav-link.active,
+        .nav-link:hover {
+            color: #f59e0b;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-r from-green-400 to-green-600 text-white">
+    <!-- Header with Navigation -->
+    <header class="bg-green-800 text-white p-6 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-extrabold tracking-wide">Crop Disease Detection</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a id="home-link" class="nav-link" href="/">Home</a></li>
+                    <li><a id="disease-detection-link" class="nav-link" href="/disease-detection">Disease Detection</a></li>
+                    <li><a id="disease-info-link" class="nav-link active" href="/prediction-result">Diseases Report</a></li>
+                    <li><a id="remedy-link" class="nav-link" href="/remedy-prevention">Diseases & Remedies</a></li>
+                    <li><a id="about-link" class="nav-link" href="/about">About</a></li>
+                    <li><a id="contact-link" class="nav-link" href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main content showing prediction result and remedies -->
+    <section
+        class="p-10 bg-white rounded-lg shadow-xl mx-auto my-10 max-w-4xl text-black"
+    >
+        <h2 class="text-3xl font-semibold mb-6 text-center">Disease Prediction</h2>
+
+        <h1 class="text-2xl font-semibold mb-4">Prediction Result</h1>
+
+        <!-- Displaying the uploaded image -->
+        <div class="mb-6 text-center">
+            <img
+                id="uploaded-image"
+                src="{{ image_url }}"
+                alt="Uploaded Image"
+                class="max-w-full h-auto rounded-lg shadow-lg border-4 border-white hover:shadow-2xl transition-shadow duration-300"
+            />
+        </div>
+
+        <!-- Displaying the prediction result -->
+        <div
+            id="prediction-result"
+            class="text-xl font-bold mb-4 text-center bg-yellow-100 p-4 rounded-lg shadow-md"
+        >
+            {{ prediction }}
+        </div>
+
+        <!-- Remedies section -->
+        <div
+            id="remedies"
+            class="text-center mt-6 bg-gray-100 p-4 rounded-lg shadow-md"
+        >
+            <h3 class="text-2xl font-semibold text-black">
+                Available Remedies & Medicines
+            </h3>
+            <p id="remedy-list" class="text-lg text-gray-700 mt-4">Loading remedies...</p>
+        </div>
+
+        <div class="mt-8 text-center">
+            <a
+                href="/disease-detection"
+                class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-green-800 py-3 px-6 rounded-full text-xl font-bold shadow-md hover:bg-gradient-to-l transition duration-300"
+                >Try Another Image</a
+            >
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-green-800 text-white py-6 text-center">
+        <p>&copy; 2024 Crop Disease Detection Project</p>
+        <p>
+            Contact us:
+            <a href="mailto:Kunalkanse@cropdisease.com" class="text-yellow-300"
+                >Kunalkanse@cropdisease.com</a
+            >
+        </p>
+    </footer>
+
+    <script>
+        (function () {
+            // Get the prediction from the template, escaping quotes safely
+            const prediction = {{ prediction | tojson | safe }};
+
+            if (!prediction) {
+                document.getElementById('remedy-list').textContent =
+                    'No prediction available to fetch remedies.';
+                return;
+            }
+
+            fetch(`/remedies?disease=${encodeURIComponent(prediction)}`)
+                .then((response) => response.json())
+                .then((data) => {
+                    if (data.remedies && data.remedies.length > 0) {
+                        document.getElementById(
+                            'remedy-list'
+                        ).innerHTML = `<ul>${data.remedies
+                            .map((remedy) => `<li>${remedy}</li>`)
+                            .join('')}</ul>`;
+                    } else {
+                        document.getElementById('remedy-list').textContent =
+                            'No remedies found for this disease.';
+                    }
+                })
+                .catch((error) => {
+                    console.error('Error fetching remedies:', error);
+                    document.getElementById('remedy-list').textContent =
+                        'Error fetching remedies. Please try again later.';
+                });
+        })();
+    </script>
+</body>
+
+</html>
